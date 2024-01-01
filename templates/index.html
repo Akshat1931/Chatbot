@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <title>Momo Belia Deviluke Chatbot</title>
+</head>
+<body>
+
+    <div class="front-page">
+        <div class="header">
+            <div class="character-section">
+                <div class="character-image">
+                    <img src="{{ url_for('static', filename='momo-image.jpg') }}" alt="Momo Belia Deviluke">
+                </div>
+                <div class="character-description">
+                    <h1>Momo Belia Deviluke</h1>
+                    <p>Momo Belia Deviluke is a character from the anime "To Love-Ru." She is known for her playful and mischievous personality.</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-boxes" id="chat-boxes">
+            <!-- Chat messages will be dynamically added here -->
+        </div>
+        <div class="user-input">
+            <input type="text" id="user-input" placeholder="Type your message..." onkeyup="checkEnterKey(event)">
+            <button id="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</body>
+</html>
